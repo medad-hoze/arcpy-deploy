@@ -2,7 +2,7 @@
   "name": "geomai",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://medad-hoze.github.io/army-deoply",
+  "homepage": "https://github.com/medad-hoze/dep-page.git",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
