@@ -1,8 +1,8 @@
 'use client';
 import { useEffect, useState } from 'react';
-import { ref, get, update, set } from 'firebase/database';
+import { ref, get, set } from 'firebase/database';
 import { database } from '@/firebase/config';
-import { Loader2, Search, ChevronUp, ChevronDown, Filter, Settings, X, Save, Edit2 } from 'lucide-react';
+import { Loader2, Search, ChevronUp, ChevronDown, Settings, X, Save, Edit2 } from 'lucide-react';
 import { useAuth } from '@/contexts/AuthContext';
 
 interface VehicleData {

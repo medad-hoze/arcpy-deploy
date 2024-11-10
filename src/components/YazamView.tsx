@@ -3,8 +3,8 @@
 import { useEffect, useState } from 'react';
 import { ref, get } from 'firebase/database';
 import { database } from '@/firebase/config';
-import { Building2, MapPin, Users, ChevronDown, ChevronUp, Clock, Search } from 'lucide-react';
-import React, { useCallback } from 'react';
+import { MapPin, ChevronDown, ChevronUp, Clock, Search } from 'lucide-react';
+import React from 'react';
 
 
 interface RecruitedData {

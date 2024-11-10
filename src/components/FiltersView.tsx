@@ -86,14 +86,7 @@ const FiltersView: React.FC = () => {
     return [];
   };
 
-  const fetchApiData = async (url: string) => {
-    const response = await fetch(url);
-    if (!response.ok) throw new Error('Failed to fetch data');
-    const jsonData = await response.json();
-    return Object.values(jsonData) as VehicleData[];
-  };
 
-  // Data fetching effect
   useEffect(() => {
     const fetchData = async () => {
       setIsLoading(true);

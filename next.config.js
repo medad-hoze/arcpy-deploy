@@ -1,13 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',  // For static build
-  distDir: 'build', // Build directory
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
+  output: 'export',  // This is correct for static build
+  // Remove distDir: 'build' as it can cause issues with static export
+  reactStrictMode: true,
   images: {
-    unoptimized: true,
-  },
+    unoptimized: true  // Required for static export
+  }
 }
 
 module.exports = nextConfig

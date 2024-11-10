@@ -1,16 +1,16 @@
 {
-  "name": "geomai",
+  "name": "army",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/medad-hoze/dep-page.git",
+  "homepage": "https://github.com/medad-hoze/arcpy-deploy",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start -p 3000",
+    "start": "next start",
     "lint": "next lint",
-    "export": "next build && next export",
-    "predeploy":"npm run build",
-    "deploy": "gh-pages -d build"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "postbuild": "move out build"
   },
   "dependencies": {
     "emailjs-com": "^3.2.0",
@@ -18,12 +18,11 @@
     "leaflet": "^1.9.4",
     "lucide-react": "^0.455.0",
     "next": "15.0.3",
-    "react": "19.0.0-rc-66855b96-20241106",
-    "react-dom": "19.0.0-rc-66855b96-20241106",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-leaflet": "^4.2.1",
     "react-router-dom": "^6.28.0",
-    "recharts": "^2.13.3",
-    "tailwind-merge": "^2.5.4"
+    "recharts": "^2.13.3"
   },
   "devDependencies": {
     "@types/leaflet": "^1.9.14",
