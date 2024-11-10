@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import 'leaflet/dist/leaflet.css'
+import { AuthProvider } from '@/contexts/AuthContext';
+import AuthSidebar from '@/components/AuthSidebar';
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -20,15 +23,18 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+    <html lang="en" dir="rtl">
+      <body>
+        <AuthProvider>
+          <AuthSidebar />
+          <div className="pr-80"> {/* Add padding for sidebar */}
+            {children}
+          </div>
+        </AuthProvider>
       </body>
     </html>
   );
